@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(){
+	int file = open("empty",O_RDONLY);
+	char buffer[10];
+	int count = 10 ; 
+	read(file,buffer,count);
+	printf("%s\n",buffer );
+}	
